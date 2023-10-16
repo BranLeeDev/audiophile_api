@@ -3,12 +3,15 @@ const { models } = require("../libs/sequelize");
 
 class ImagesService {
   async findAll() {
-    const rta = models.Image.findAll();
+    const rta = models.Image.findAll({
+      include: [{ association: "product", attributes: ["id", "name"] }],
+      attributes: { exclude: ["createdAt", "updatedAt"] },
+    });
     return rta;
   }
 
   async findOne(id) {
-    const rta = models.Image.findByPk(id);
+    const rta = models.Image.findByPk(id, { include: ["product"] });
     if (!rta) throw boom.notFound("Image not Found");
     return rta;
   }

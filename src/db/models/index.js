@@ -9,6 +9,7 @@ function setupModels(sequelize) {
 
   Category.associate(sequelize.models);
   Product.associate(sequelize.models);
+  Image.associate(sequelize.models);
 }
 
 module.exports = setupModels;

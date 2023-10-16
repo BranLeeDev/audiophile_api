@@ -1,4 +1,5 @@
 const { DataTypes, Model } = require("sequelize");
+const { PRODUCTS_TABLE } = require("./products.model");
 
 const IMAGES_TABLE = "images";
 
@@ -28,10 +29,22 @@ const ImageSchema = {
     allowNull: false,
     type: DataTypes.STRING(50),
   },
+  productId: {
+    field: "product_id",
+    type: DataTypes.INTEGER,
+    references: {
+      model: PRODUCTS_TABLE,
+      key: "id",
+    },
+    onUpdate: "CASCADE",
+    onDelete: "CASCADE",
+  },
 };
 
 class Image extends Model {
-  static associate() {}
+  static associate(models) {
+    this.belongsTo(models.Product, { as: "product" });
+  }
 
   static config(sequelize) {
     return {

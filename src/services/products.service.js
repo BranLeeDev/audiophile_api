@@ -11,7 +11,9 @@ class ProductsService {
   }
 
   async findOne(id) {
-    const rta = models.Product.findByPk(id, { include: "category" });
+    const rta = models.Product.findByPk(id, {
+      include: ["category", "images"],
+    });
     if (!rta) throw boom.notFound("Product not Found");
     return rta;
   }
