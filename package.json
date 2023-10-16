@@ -4,7 +4,7 @@
   "description": "REST API created with Express, Sequelize, Docker and PostgreSQL",
   "main": "src/app.js",
   "scripts": {
-    "dev": "nodemon src/app.js"
+    "dev": "nodemon src/server.js"
   },
   "keywords": [
     "REST API",
