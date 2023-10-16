@@ -6,6 +6,7 @@ const routerApi = require("./routes");
 const {
   ormErrorHandler,
   boomErrorHandler,
+  errorHandler,
 } = require("./middlewares/errors.middleware");
 
 const app = express();
@@ -33,6 +34,6 @@ routerApi(app);
 
 app.use(ormErrorHandler);
 app.use(boomErrorHandler);
-app.use(ormErrorHandler);
+app.use(errorHandler);
 
 module.exports = app;
