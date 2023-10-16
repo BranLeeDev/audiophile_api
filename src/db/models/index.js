@@ -6,6 +6,9 @@ function setupModels(sequelize) {
   Category.init(CategorySchema, Category.config(sequelize));
   Product.init(ProductSchema, Product.config(sequelize));
   Image.init(ImageSchema, Image.config(sequelize));
+
+  Category.associate(sequelize.models);
+  Product.associate(sequelize.models);
 }
 
 module.exports = setupModels;

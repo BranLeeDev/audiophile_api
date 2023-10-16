@@ -3,12 +3,21 @@ const { models } = require("../libs/sequelize");
 
 class CategoriesService {
   async findAll() {
-    const rta = models.Category.findAll();
+    const rta = models.Category.findAll({
+      attributes: { exclude: ["createdAt", "updatedAt"] },
+    });
     return rta;
   }
 
   async findOne(id) {
-    const rta = models.Category.findByPk(id);
+    const rta = models.Category.findByPk(id, {
+      include: [
+        {
+          association: "products",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+        },
+      ],
+    });
     if (!rta) throw boom.notFound("Category not Found");
     return rta;
   }
