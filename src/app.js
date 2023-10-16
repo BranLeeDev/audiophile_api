@@ -3,6 +3,10 @@ const cors = require("cors");
 const helmet = require("helmet");
 const boom = require("@hapi/boom");
 const routerApi = require("./routes");
+const {
+  ormErrorHandler,
+  boomErrorHandler,
+} = require("./middlewares/errors.middleware");
 
 const app = express();
 
@@ -26,5 +30,9 @@ app.get("/", (req, res) => {
 });
 
 routerApi(app);
+
+app.use(ormErrorHandler);
+app.use(boomErrorHandler);
+app.use(ormErrorHandler);
 
 module.exports = app;
