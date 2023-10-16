@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const helmet = require("helmet");
 const boom = require("@hapi/boom");
+const routerApi = require("./routes");
 
 const app = express();
 
@@ -23,5 +24,7 @@ app.use(express.json());
 app.get("/", (req, res) => {
   return res.send("I'm the HOME");
 });
+
+routerApi(app);
 
 module.exports = app;
