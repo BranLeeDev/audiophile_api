@@ -32,6 +32,14 @@ const CategorySchema = {
     allowNull: false,
     type: DataTypes.STRING(50),
   },
+  createdAt: {
+    allowNull: false,
+    type: DataTypes.DATE,
+  },
+  updatedAt: {
+    allowNull: false,
+    type: DataTypes.DATE,
+  },
 };
 
 class Category extends Model {

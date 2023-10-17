@@ -19,7 +19,6 @@ Esta REST API fue desarrollada como parte del desafío propuesto por [Frontend M
 - [Sequelize](https://sequelize.org/): ORM (Object-Relational Mapping) para bases de datos SQL, facilitando la interacción con bases de datos.
 - [pg](https://www.npmjs.com/package/pg): Cliente de PostgreSQL para Node.js, permitiendo interactuar con bases de datos PostgreSQL.
 - [pg-hstore](https://www.npmjs.com/package/pg-hstore): Serializador/deserializador de objetos JSON para datos de PostgreSQL.
-- [sequelize-cli](https://sequelize.org/docs/v6/other-topics/migrations/): Herramienta de línea de comandos para Sequelize, que facilita la administración de bases de datos y la generación de código relacionado con el ORM.
 - [Boom](https://www.npmjs.com/package/@hapi/boom): Proporciona utilidades para manejar errores HTTP en Node.js.
 - [Cors](https://www.npmjs.com/package/cors): Middleware que permite controlar el acceso a tu API desde diferentes orígenes.
 - [Helmet](https://www.npmjs.com/package/helmet): Ayuda a proteger tu aplicación Express configurando varios encabezados HTTP relacionados con la seguridad.
@@ -30,6 +29,7 @@ Esta REST API fue desarrollada como parte del desafío propuesto por [Frontend M
 - [ESLint](https://eslint.org/): Herramienta de linter para identificar y reportar patrones en el código JavaScript.
 - [Nodemon](https://nodemon.io/): Monitorear cualquier cambio en su fuente y reinicie automáticamente su servidor.
 - [Prettier](https://prettier.io/): Formateador de código para mantener un estilo consistente y legible.
+- [sequelize-cli](https://sequelize.org/docs/v6/other-topics/migrations/): Herramienta de línea de comandos para Sequelize, que facilita la administración de bases de datos y la generación de código relacionado con el ORM.
 
 ## Variables de Entorno
 

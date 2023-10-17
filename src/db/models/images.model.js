@@ -39,6 +39,14 @@ const ImageSchema = {
     onUpdate: "CASCADE",
     onDelete: "CASCADE",
   },
+  createdAt: {
+    allowNull: false,
+    type: DataTypes.DATE,
+  },
+  updatedAt: {
+    allowNull: false,
+    type: DataTypes.DATE,
+  },
 };
 
 class Image extends Model {

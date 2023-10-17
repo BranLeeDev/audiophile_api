@@ -45,6 +45,14 @@ const ProductSchema = {
     onUpdate: "CASCADE",
     onDelete: "CASCADE",
   },
+  createdAt: {
+    allowNull: false,
+    type: DataTypes.DATE,
+  },
+  updatedAt: {
+    allowNull: false,
+    type: DataTypes.DATE,
+  },
 };
 
 class Product extends Model {
