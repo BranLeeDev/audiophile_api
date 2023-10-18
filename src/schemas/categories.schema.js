@@ -6,9 +6,7 @@ const alt = Joi.string().min(6).max(50);
 
 const createCategorySchema = Joi.object({
   name: name.required(),
-  mobileImage: url.required(),
-  tabletImage: url.required(),
-  desktopImage: url.required(),
+  image: url.required(),
   alt: alt.required(),
 });
 

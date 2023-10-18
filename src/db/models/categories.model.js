@@ -13,18 +13,7 @@ const CategorySchema = {
     allowNull: false,
     type: DataTypes.STRING(15),
   },
-  mobileImage: {
-    field: "mobile_image",
-    allowNull: false,
-    type: DataTypes.TEXT,
-  },
-  tabletImage: {
-    field: "tablet_image",
-    allowNull: false,
-    type: DataTypes.TEXT,
-  },
-  desktopImage: {
-    field: "desktop_image",
+  image: {
     allowNull: false,
     type: DataTypes.TEXT,
   },
